@@ -1,7 +1,9 @@
 class Pokemon
   attr_accessor :id, :name, :type, :hp, :db
 
+  def initialize(id:, name: , type: , hp: , db:)
 
+  end  
 
   def self.find(id_num, db)
     pokemon_info = db.execute("SELECT * FROM pokemon WHERE id=?", id_num).flatten
